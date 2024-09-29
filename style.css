@@ -1,0 +1,330 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+
+* {font-family: 'Open Sans', sans-serif;}
+
+.fl-table {
+  margin: auto;
+  min-width: 300px;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.fl-table tr:first-child {
+  border-top: none;
+  background: #428bca;
+  color: #fff;
+}
+
+.fl-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+}
+
+.fl-table tr:nth-child(odd):not(:first-child) {
+  background-color: #ebf3f9;
+}
+
+.fl-table th {
+  display: none;
+}
+
+.fl-table td {
+  display: block;
+}
+
+.fl-table td:first-child {
+  margin-top: .5em;
+}
+
+.fl-table td:last-child {
+  margin-bottom: .5em;
+}
+
+.fl-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 120px;
+  display: inline-block;
+  color: #000;
+}
+
+.fl-table th,
+.rwd-table td {
+  text-align: left;
+}
+
+.fl-table {
+  color: #333;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.fl-table tr {
+  border-color: #bfbfbf;
+}
+
+.fl-table th,
+.fl-table td {
+  padding: .5em 1em;
+}
+
+@media screen and (min-width: 600px) {
+  .fl-table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+  }
+  .fl-table td:before {
+    display: none;
+  }
+  .fl-table th,
+  .fl-table td {
+    display: table-cell;
+    padding: .25em .5em;
+  }
+  
+}
+
+
+/* THE END OF THE IMPORTANT STUFF */
+
+/* Basic Styling */
+body {
+background: #4B79A1;
+background: -webkit-linear-gradient(to left, #4B79A1 , #283E51);
+background: linear-gradient(to left, #4B79A1 , #283E51);        
+}
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  color: #f2f2f2;
+}
+.container {
+  display: block;
+  text-align: center;
+}
+
+
+
+ 
+
+/*
+    Don't look at this last part. It's unnecessary. I was just playing with pixel gradients... Don't judge.
+*/
+
+
+
+
+
+
+
+
+*{
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; 
+    padding: 0%;
+    margin: 0%;
+}
+
+
+
+.container {
+    margin: 20px;
+}
+
+
+
+
+
+.fl-table {
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+
+
+
+
+
+
+
+
+/*                                    Responsive                                  */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+        min-height: 600px;
+    }
+    h1{
+        font-size: 23px;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .table-wrapper{
+        margin: 0px;
+        
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table tr td{
+        width: 250px;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    /* .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    } */
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+/*                                     icons                                       */
+.flexContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+h1{
+    margin-right: auto;
+}
+span{
+    cursor: pointer;;
+	margin-right: 20vh;
+}
+
+/*                                     form                                       */
+#addNewChemicalForm {
+    margin-top: 16px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button[type="submit"] {
+    margin-top: 8px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  /*                                    pointer                                         */
+  
+  th:nth-child(3) {
+    position: relative;
+    cursor: pointer;
+}
+
+th:nth-child(3)::after {
+    content: "Click to Sort"; 
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    bottom: 100%;
+    background-color: #333; 
+    color: #fff; 
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap; 
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+th:nth-child(3):hover::after {
+    opacity: 1; 
+}
+
+/*                   Styles for the empty message row                               */
+#emptyMessageRow {
+    display: none; 
+    background-color: #f9f9f9; 
+    color: #888; 
+    font-size: 16px; 
+    text-align: center; 
+    height: 50px; 
+}
+
+.head{
+	align-items: center;
+	margin-bottom: 20px;
+}
+
